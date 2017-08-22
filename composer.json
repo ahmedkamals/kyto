@@ -1,0 +1,29 @@
+{
+    "name": "Senior PHP Software Engineer",
+    "license": "",
+    "type": "project",
+    "description": "\"Kyto\" vacancy.",
+    "autoload": {
+        "psr-4": {
+            "Kyto\\": "src/kyto"
+        },
+        "classmap": []
+    },
+    "autoload-dev": {
+        "psr-4": { "Tests\\": "tests/" },
+        "files": []
+    },
+    "require": {
+        "php": ">=7.1.0",
+        "ext-dom": "*",
+        "phpunit/phpunit": "^6.3"
+    },
+    "config": {
+        "platform": {
+            "php": "7.1.0"
+        },
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "minimum-stability": "stable"
+}
