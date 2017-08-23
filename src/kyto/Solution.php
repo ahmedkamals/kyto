@@ -7,8 +7,6 @@ use Kyto\Shapes\Polygon;
 use Kyto\Shapes\Shape;
 use Kyto\Shapes\Triangle;
 
-require __DIR__.'/../../vendor/autoload.php';
-
 /**
  * Class Solution
  * @package Kyto
@@ -96,6 +94,7 @@ class Solution
     public function render(array $shapes, string $lineSeparator)
     {
         $size = count($shapes);
+
         foreach ($shapes as $key => $shape) {
             echo implode($shape->getShapeData(), $lineSeparator),
             $key < $size - 1? str_repeat($lineSeparator, 3) : $lineSeparator;
@@ -103,15 +102,3 @@ class Solution
     }
 }
 
-try {
-
-    $sizeIndex = rand(0, count(Shape::SIZES) - 1);
-
-    if (count($argv) >= 2) {
-        $sizeIndex = $argv[1];
-    }
-
-    (new Solution())->run(['size' => $sizeIndex]);
-} catch (InvalidArgumentException $e) {
-    echo 'Error: ', $e->getMessage();
-}
