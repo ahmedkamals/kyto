@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Exception;
+namespace Kyto\Exception;
 
 /**
  * Class InvalidArgumentException

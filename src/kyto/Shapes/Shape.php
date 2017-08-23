@@ -1,6 +1,6 @@
 <?php
 
-namespace Shapes;
+namespace Kyto\Shapes;
 
 /**
  * Class Shape
@@ -63,6 +63,30 @@ Abstract class Shape
         }
 
         return static::LINE_HEIGHTS[rand(0, count(static::LINE_HEIGHTS) - 1)];
+    }
+
+    /**
+     * @return string
+     */
+    public function getSize(): string
+    {
+        return $this->size;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSurroundingCharacter(): string
+    {
+        return $this->surroundingCharacter;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDrawingCharacter(): string
+    {
+        return $this->drawingCharacter;
     }
 
     /**
